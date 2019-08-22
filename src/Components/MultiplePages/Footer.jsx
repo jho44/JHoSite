@@ -19,12 +19,12 @@ const GrayDiv = styled("div") ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    zIndex: 100,
     alignItems: "center",
     paddingTop: "15px",
     paddingBottom: "15px",
     minWidth: "400px",
-    boxShadow: "2px -2px 5px gray"
+    boxShadow: "inset 0px 3px 5px #e4e4ee",
+
 })
 
 const Container = styled("div") ({

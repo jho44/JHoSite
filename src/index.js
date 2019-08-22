@@ -4,6 +4,8 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import HomePage from "../src/Components/Home/HomePage"
 import PhotosPage from "../src/Components/Photos/PhotosPage"
+import IOSDevPage from "./Components/Code/IOSDev/IOSDevPage"
+import Test from "./Components/Code/IOSDev/test"
 import {
     BrowserRouter as Router,
     Switch,
@@ -18,6 +20,8 @@ ReactDOM.render(
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/home" component={HomePage} />
                 <Route exact path="/photos" component={PhotosPage} />
+                <Route exact path="/code/iosdev" component={IOSDevPage} />
+                <Route exact path="/code/test" component={Test} />
             </Switch>
             <Footer/>
         </div>

@@ -1,0 +1,25 @@
+.card-name {
+    padding-left: 5%;
+    font-size: 20px;
+    font-family: "Avenir Next";
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    white-space: nowrap;
+    /* border-style: solid; */
+}
+
+.card-name-box {
+    padding: 0;
+    display: flex;
+}
+
+.card-button {
+    padding: 0; 
+    margin-left: auto;
+    /* border-style: solid; */
+}
+
+.card-boi {
+    box-shadow: 3px 3px 5px black;
+}

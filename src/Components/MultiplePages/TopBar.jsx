@@ -2,8 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
-import { grey } from '@material-ui/core/colors';
 import { BrowserRouter as Router } from "react-router-dom"
 import { withStyles, fade } from "@material-ui/core/styles"
 import * as constants from "../../constants"
@@ -15,7 +13,8 @@ const useStyles = makeStyles(theme => ({
     padding: "0.5%",
     display: "flex",
     justifyContent: "center",
-    boxShadow: "0 3px 10px #e4e4ee"
+    boxShadow: "0 3px 10px #e4e4ee",
+    //width: "100%"
   },
   paper: {
     position: 'absolute',
@@ -96,8 +95,12 @@ export default function TopBar(props) {
                     <StyledButton onClick={handleClick} id="codebutton">Code</StyledButton>
                     {open ? (
                         <div className={classes.paper} style={{left: document.getElementById("codebutton").getBoundingClientRect().left, width: parentWidth(document.getElementById("codebutton"))}}>
-                            <SmallerStyledButton>iOS Dev</SmallerStyledButton> 
-                            <SmallerStyledButton>Web Dev</SmallerStyledButton>
+                            <SmallerStyledButton onClick={() => props.history.push({ pathname: "/code/iosdev" })}>
+                                iOS Dev
+                            </SmallerStyledButton> 
+                            <SmallerStyledButton onClick={() => props.history.push({ pathname: "/code/test" })}>
+                                Web Dev
+                            </SmallerStyledButton>
                             <SmallerStyledButton style={{height: 60}}>Python - Data</SmallerStyledButton>
                         </div>
                     ) : null}
