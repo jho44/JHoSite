@@ -98,10 +98,12 @@ export default function TopBar(props) {
                             <SmallerStyledButton onClick={() => props.history.push({ pathname: "/code/iosdev" })}>
                                 iOS Dev
                             </SmallerStyledButton> 
-                            <SmallerStyledButton onClick={() => props.history.push({ pathname: "/code/test" })}>
+                            <SmallerStyledButton onClick={() => props.history.push({ pathname: "/code/webdev" })}>
                                 Web Dev
                             </SmallerStyledButton>
-                            <SmallerStyledButton style={{height: 60}}>Python - Data</SmallerStyledButton>
+                            <SmallerStyledButton style={{height: 60}} onClick={() => props.history.push({ pathname: "/code/pythondata" })}>
+                                Python - Data
+                            </SmallerStyledButton>
                         </div>
                     ) : null}
                     <StyledButton onClick={() => props.history.push({ pathname: "/photos" })}>

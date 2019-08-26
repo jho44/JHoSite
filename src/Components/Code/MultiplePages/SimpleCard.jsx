@@ -18,7 +18,7 @@ export default function SimpleCard(props) {
   return (
     <Card className={classes.card} >
       <img src={props.image} style={{width: "100%"}}/>
-      <CardContent style={{padding: "5%", paddingLeft:0, display: "block"}}>
+      <CardContent style={{padding: "5%", paddingLeft:0, display: "block", overflow: "hidden"}}>
         <p className="card-name">
           {props.name}
         </p>
