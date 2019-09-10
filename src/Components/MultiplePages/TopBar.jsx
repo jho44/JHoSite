@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     boxShadow: "0 3px 10px #e4e4ee",
+    zIndex: 100
     //width: "100%"
   },
   paper: {

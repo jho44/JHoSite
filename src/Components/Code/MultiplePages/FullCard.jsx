@@ -56,7 +56,7 @@ export default function FullCard(props) {
       
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography style={{fontFamily: "Avenir Next"}}>{props.text}</Typography>
+          <Typography style={{fontFamily: "Montserrat"}}>{props.text}</Typography>
         </CardContent>
       </Collapse>
     </Card>

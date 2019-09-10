@@ -2,7 +2,9 @@ import React, {Component} from "react"
 import TopBar from "../MultiplePages/TopBar"
 import {styled} from "@material-ui/styles"
 import * as constants from "../../constants"
-
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import "./photos.css"
 // TODO: images that enlarge when clicked on
 // maybe enable flip cards?
 
@@ -32,26 +34,33 @@ const TotoroFigure=require("../../images/totorofigure.jpg");
 const Umbrellas=require("../../images/umbrellas.jpg");
 
 export default class PhotosPage extends Component {
+    componentDidMount(){
+        AOS.init({
+            duration : 1500
+        })
+    }
     render() {
         return (
             <Container>
                 <Content>
                     <TopBar history={this.props.history}/>
-                    <Header>
-                        Since I did a stint in ROP's Photography class, I figure I might as well put the fruits of my labor here.
-                    </Header>
-                        <Row>
-                            <Column>
-                                <Pic src={TotoroFigure} alt="Totoro figurine"/>
-                                <Pic src={MilkTeaGlass} alt="milk tea in glass"/>
-                                <Pic src={ChocoCake} alt="chocolate cake"/>
-                                <Pic src={IceCreamBlackWhite} alt="ice cream in black and white"/>
-                                <Pic src={MilkTeaPlastic} alt="milk tea in plastic cup"/>
-                                <Pic src={MtFuji} alt="Mt. Fuji"/>
-                                <Pic src={Umbrellas} alt="origami umbrellas"/>
-                                <Pic src={SpookyStairs} alt="spooky stairs"/>
+                    <BigBox>
+                        <Header data-aos="fade-up">
+                            Since I did a stint in ROP's Photography class, I figured I may as well put the fruits of my labor here.
+                        </Header>
+                    </BigBox>
+                        <Row className="gallery">
+                            <Column className="col1">
+                                <Pic src={TotoroFigure} alt="Totoro figurine" />
+                                <Pic src={MilkTeaGlass} alt="milk tea in glass" />
+                                <Pic src={ChocoCake} alt="chocolate cake" />
+                                <Pic src={IceCreamBlackWhite} alt="ice cream in black and white" />
+                                <Pic src={MilkTeaPlastic} alt="milk tea in plastic cup" />
+                                <Pic src={MtFuji} alt="Mt. Fuji"  />
+                                <Pic src={Umbrellas} alt="origami umbrellas" />
+                                <Pic src={SpookyStairs} alt="spooky stairs" />
                             </Column>
-                            <Column>
+                            <Column className="col2">
                                 <Pic src={Lamps} alt="Smoko lamps"/>
                                 <Pic src={BlackWhiteLight} alt="light in black and white"/>
                                 <Pic src={Dumplings} alt="dumplings"/>
@@ -61,7 +70,7 @@ export default class PhotosPage extends Component {
                                 <Pic src={Skylight} alt="skylight"/>
                                 <Pic src={Stairs} alt="stairs in Apple"/>
                             </Column>
-                            <Column>
+                            <Column className="col3">
                                 <Pic src={CakeHighAngle} alt="cake from high angle"/>
                                 <Pic src={CakeLowAngle} alt="cake from table level"/>
                                 <Pic src={Eggs} alt="eggs in ramen"/>
@@ -93,38 +102,42 @@ const Content = styled("div") ({
 
 const Header = styled("div") ({
     backgroundColor: constants.DARK_GRAY,
-    //minHeight: "20vh",
     color: "white",
     display: "flex",
-    //paddingTop: "100px",
     marginLeft: "30%",
     marginRight: "30%",
-    marginTop: "4%",
     padding: "2%",
     fontSize: "25px",
     fontFamily: "Avenir Next",
     borderStyle: "solid",
     borderColor: constants.LIGHT_PURPLE,
-    textAlign: "center"
+    textAlign: "center",
+})
+
+const BigBox = styled("div") ({
+    height: "100vh",
+    display: "flex",
+    justifyContent:"center",
+    alignItems: "center",
+    backgroundImage: "radial-gradient(#ff6e9e, white)"
+
 })
 
 const Row = styled("div") ({
     display: "flex",
-    flexWrap: "wrap",
+    //flexWrap: "wrap",
     justifyContent: "center",
-    padding: "5% 4px 2% 4px",
-    // borderStyle: "solid",
-    // borderColor: "black"
+    padding: "0 4px 4% 4px",
 })
 
 const Column = styled("div") ({
-    flex: "25%",
-    maxWidth: "25%",
-    padding: "0 4px"
+    flex: 1,
+    maxWidth: "26%",
+    padding: "0 2%",
 })
 
 const Pic = styled("img") ({
-    marginTop: "8px",
+    marginTop: "16%",
     verticalAlign: "middle",
     width: "100%"
 })

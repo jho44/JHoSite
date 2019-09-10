@@ -20,9 +20,8 @@ const GrayDiv = styled("div") ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "15px",
-    paddingBottom: "15px",
-    minWidth: "400px",
+    padding: "2% 0",
+    //minWidth: "400px",
     boxShadow: "inset 0px 3px 5px #e4e4ee",
 
 })
@@ -40,21 +39,21 @@ const BannerText1 = styled("p") ({
     color: constants.LIGHT_GRAY,
     order: 0,
     padding: "0 0 0 0",
-    margin: "10px 0 0 0"
+    margin: "0 0 0 0"
 })
 
 const BannerText2 = styled("p") ({
     color: constants.LIGHT_GRAY,
     order: 1,
-    padding: "0 0 0 0",
-    // margin: "1 1 1 1"
+    padding: "1% 0",
+    margin: "0 0 0 0"
 })
 
 const BannerText3 = styled("p") ({
     color: constants.LIGHT_GRAY,
     order: 2,
     padding: "0 0 0 0",
-    margin: "0 0 10px 0"
+    margin: "0 0 0 0"
 })
 
 const Mailto = styled("a") ({
