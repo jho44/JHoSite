@@ -5,6 +5,10 @@ import * as constants from "../../constants"
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import "./photos.css"
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
+import "../MultiplePages/ScrollUpBtn.css"
+
+
 // TODO: images that enlarge when clicked on
 // maybe enable flip cards?
 
@@ -44,6 +48,7 @@ export default class PhotosPage extends Component {
             <Container>
                 <Content>
                     <TopBar history={this.props.history}/>
+                    <ScrollUpButton style={{backgroundColor: constants.PINK_RED_ORANGE, borderRadius: "50%", padding: "10px", bottom: "17%"}}/>
                     <BigBox>
                         <Header data-aos="fade-up">
                             Since I did a stint in ROP's Photography class, I figured I may as well put the fruits of my labor here.
@@ -97,7 +102,7 @@ const Container = styled("div") ({
 })
 
 const Content = styled("div") ({
-    backgroundColor: constants.DARK_GRAY,
+    // backgroundColor: constants.DARK_GRAY,
 })
 
 const Header = styled("div") ({
@@ -132,7 +137,7 @@ const Row = styled("div") ({
 
 const Column = styled("div") ({
     flex: 1,
-    maxWidth: "26%",
+    maxWidth: "25%",
     padding: "0 2%",
 })
 

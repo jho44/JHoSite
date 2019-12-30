@@ -6,6 +6,7 @@ import ProjHeader from "../MultiplePages/ProjHeader"
 import SimpleCard from "../MultiplePages/SimpleCard"
 import PrettyHeader from "../MultiplePages/PrettyHeader";
 import FullCard from "../MultiplePages/FullCard"
+import UpArrowBtn from "../../MultiplePages/UpArrowBtn"
 
 const oneBigGraph = require("./pythonpics/1graph.png");
 const oneGraphCode = require("./pythonpics/1graphcode.png");
@@ -17,6 +18,7 @@ export default class IOSDevPage extends Component {
         return (
             <Container>
                 <TopBar history={this.props.history}/>
+                <UpArrowBtn/>
                 <div style={{display: "flex", padding: "1%", paddingLeft: 0, paddingBottom: "2%"}}>
                     <PrettyHeader name="Comparing Data Visualization Techniques from Python, Matlab, and Excel"/>
                     <Card>

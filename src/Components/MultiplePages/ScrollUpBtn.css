@@ -1,0 +1,15 @@
+.AnyClassForContainer {
+    position: fixed;
+    right: -10%;
+    bottom: 17%;
+    transition: right 0.5s;
+    cursor: pointer;
+    background-color: #ff9385;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .AnyClassForTransition {
+    right: 20px;
+  }

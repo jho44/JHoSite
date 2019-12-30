@@ -1,38 +1,37 @@
-img {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-  }
+.gallery img {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
 
-img:hover {
-    transform: scale(1.2);
+.gallery img:hover {
+  transform: scale(1.2);
 
-    transition: transform 1s ease-in-out;
-    outline: rgb(62, 62, 62) solid 4px;
+  transition: transform 1s ease-in-out;
+  outline: rgb(62, 62, 62) solid 4px;
 }
 
 .gallery {
-    background: linear-gradient(to right, #fff8e3, #ffe3f0);
-    position: relative;
-    z-index: 1;
-  }
+  background: linear-gradient(to right, #fff8e3, #ffe3f0);
+  position: relative;
+  z-index: 0;
+}
 
-  .gallery:before
-  {
-    background: inherit;
-    content: '';
-    display: block;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    backface-visibility: hidden; 
-    top: 0;
-    transform: skewY(1.5deg);
-    transform-origin: 100% 0;
-  }
-  
+.gallery:before
+{
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  backface-visibility: hidden; 
+  top: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 100% 0;
+}

@@ -7,6 +7,7 @@ import FullCard from "../MultiplePages/FullCard"
 import SimpleCard from "../MultiplePages/SimpleCard"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import UpArrowBtn from "../../MultiplePages/UpArrowBtn"
 
 const launchscreen = require("../IOSDev/ios_pics/launchscreen.png");
 const main_menu = require("../IOSDev/ios_pics/main_menu.png");
@@ -25,6 +26,7 @@ export default class IOSDevPage extends Component {
         return (
             <Container>
                 <TopBar history={this.props.history}/>
+                <UpArrowBtn/>
                 <ProjHeader name="WorkItLoud App" text="An alarm to use while working out. Tells you when to keep moving and when to rest." />
                 <div style={{flex: 1}} data-aos="fade-up">
                     <Row>

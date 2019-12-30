@@ -5,6 +5,7 @@ import TopBar from "../MultiplePages/TopBar"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./HomePage.css"
+import UpArrowBtn from "../MultiplePages/UpArrowBtn"
 
 const profilepic=require("../../images/mesketch.jpg");
 
@@ -22,6 +23,7 @@ export default class HomePage extends Component {
                     <meta name="viewport" content="width=device-width,initial-scale=1"/>
                 </head>
                 <TopBar history={this.props.history}/>
+                <UpArrowBtn/>
                 <Header className="pretty-header">
                     J. Ho
                 </Header>
