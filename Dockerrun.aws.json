@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-        "Name": "jho44/prod-ver0.1",
+        "Name": "jho44/site-production",
         "Update": "true"
     },
     "Ports": [
