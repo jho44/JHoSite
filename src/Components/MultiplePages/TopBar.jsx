@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     left: "50%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
   }
 }));
 
@@ -50,12 +50,12 @@ const SmallerStyledButton = withStyles({
     root: {
         borderRadius: 3,
         //border: 10,
-        backgroundColor: "white",
-        color: constants.DARK_GRAY,
+        background: "rgba(255,255,255, 0.8)",
+        color: "black",
         height: 40,
-        borderColor: "black",
-        borderWidth: "1px",
-        borderStyle: "solid",
+        // borderColor: "black",
+        // borderWidth: "1px",
+        // borderStyle: "solid",
         position: "relative",
         fontSize: "15px", 
         fontFamily: "Avenir Next",
@@ -82,8 +82,6 @@ export default function TopBar(props) {
     setOpen(false);
     //document.getElementById("codebutton").style.borderWidth = 0;
   };
-
-  const fake = <div className={classes.fake} />;
 
   return (
     <Router>

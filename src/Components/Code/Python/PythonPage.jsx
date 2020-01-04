@@ -2,10 +2,8 @@ import React, { Component } from "react"
 import TopBar from "../../MultiplePages/TopBar"
 import {styled} from "@material-ui/styles"
 import * as constants from "../../../constants"
-import ProjHeader from "../MultiplePages/ProjHeader"
 import SimpleCard from "../MultiplePages/SimpleCard"
 import PrettyHeader from "../MultiplePages/PrettyHeader";
-import FullCard from "../MultiplePages/FullCard"
 import UpArrowBtn from "../../MultiplePages/UpArrowBtn"
 
 const oneBigGraph = require("./pythonpics/1graph.png");

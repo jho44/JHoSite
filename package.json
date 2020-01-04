@@ -10,11 +10,20 @@
     "@material-ui/styles": "^4.3.0",
     "@material/card": "^3.1.0",
     "aos": "^2.3.4",
+    "css-dissolve-animation-angular": "^0.1.4",
+    "dissolve-generator": "^1.0.3",
     "react": "^16.9.0",
+    "react-crossfade-image": "^1.2.0",
     "react-dom": "^16.9.0",
+    "react-flipcard-2": "^0.3.2",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
-    "react-scroll-up-button": "^1.6.4"
+    "react-scroll-up-button": "^1.6.4",
+    "react-slideshow-image": "^1.3.3",
+    "react-spring": "^8.0.27",
+    "react-transition-group": "^4.3.0",
+    "styled-components": "^4.4.1",
+    "tabletop": "^1.6.2"
   },
   "scripts": {
     "start": "react-scripts start",

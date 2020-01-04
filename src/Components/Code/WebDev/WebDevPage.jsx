@@ -11,8 +11,8 @@ export default class IOSDevPage extends Component {
             <Container>
                 <TopBar history={this.props.history}/>
                 <UpArrowBtn/>
-                <ProjHeader name="My site" text="This website is my baby."/>
-                <ProjHeader name="Design Create Solar Website" text="I'm a Project Engineer of the Design Create Solar club at UCLA and I'm one of the incubators for our baby club's infant website. I'll put up the link after it's done."/>
+                <ProjHeader name="My site" text="This website is my baby. I'll be sure to get her through puberty on my next break."/>
+                <ProjHeader name="Design Create Solar Website" text="I'm a Project Engineer of the Design Create Solar club at UCLA and I'm one of the incubators for our baby club's infant website: designcreatesolar.com."/>
             </Container>
         )
     }

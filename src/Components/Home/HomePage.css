@@ -1,26 +1,23 @@
-.pretty-header {
-    position: relative;
-    /* z-index: 1; */
-  }
-  .pretty-header:after {
-    background: #1d083b;
-    content: '';
-    display: block;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    backface-visibility: hidden;
-  }
-  .pretty-header:after {
-    bottom: 0;
-    transform: skewY(-1.5deg);
-    transform-origin: 100%;
-  }
-  
-/* .profileimg {
-    display: block;
-    padding-top: 5%;
-    padding-bottom: 5%;
-} */
+.ReactFlipCard {
+  margin: 25px;
+  text-align: center;
+}
+.ReactFlipCard,
+.ReactFlipCard__Front,
+.ReactFlipCard__Back {
+  box-sizing: border-box;
+  width: 500px;
+  height: 400px;
+}
+.ReactFlipCard__Front,
+.ReactFlipCard__Back {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.ReactFlipCard__Front {
+  background-color: rgba(255, 255, 255);
+}
+.ReactFlipCard__Back {
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+}

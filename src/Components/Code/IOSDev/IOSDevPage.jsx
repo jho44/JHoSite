@@ -57,22 +57,6 @@ export default class IOSDevPage extends Component {
     }
 }
 
-// const GridContainer = styled("div") ({
-//     // display: "grid",
-//     // gridTemplateColumns: "repeat(4, 1fr)",
-//     // gridColumnGap: "5%",
-//     // gridRowGap: "2%",
-//     // padding: "0 2%"
-//     display: "flex",
-//     paddingBottom: "2%",
-//     margin: "5%"
-// })
-
-const ProjTop = styled("div") ({
-    display: "flex",
-    //borderStyle: "solid"
-})
-
 // maybe put in separate css folder b/c copied from Photos page
 const Row = styled("div") ({
     display: "flex",
@@ -88,13 +72,6 @@ const Column = styled("div") ({
     flex: "25%",
     maxWidth: "15%",
     padding: "0 2%"
-})
-
-const Project = styled("div") ({
-    position: "relative",
-    //zIndex: "-1",
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)"
 })
 
 const Container = styled("div") ({

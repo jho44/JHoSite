@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import * as constants from "../../../constants"
 import {styled} from "@material-ui/styles"
 import ProjSummary from "./ProjSummary"
 import PrettyHeader from "./PrettyHeader"

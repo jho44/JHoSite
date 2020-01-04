@@ -8,7 +8,7 @@ const Footer = () => {
             <Container>
                 <BannerText1>Made for funsies</BannerText1>
                 <BannerText2>Contact me with <Mailto href="mailto:jessicaho44@g.ucla.edu">this</Mailto></BannerText2>
-                <BannerText3>Copyright © JHo 2019</BannerText3>
+                <BannerText3>Copyright © OffTheClockJHo 2020</BannerText3>
             </Container>
         </GrayDiv>
     )
