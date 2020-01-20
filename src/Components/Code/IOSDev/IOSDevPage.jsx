@@ -8,6 +8,7 @@ import SimpleCard from "../MultiplePages/SimpleCard"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import UpArrowBtn from "../../MultiplePages/UpArrowBtn"
+import InfoArea from "../../MultiplePages/InfoArea"
 
 const launchscreen = require("../IOSDev/ios_pics/launchscreen.png");
 const main_menu = require("../IOSDev/ios_pics/main_menu.png");
@@ -15,6 +16,18 @@ const dropdown_menu = require("../IOSDev/ios_pics/dropdown_menu.png");
 const current_session = require("../IOSDev/ios_pics/current_session.png");
 const settings = require("../IOSDev/ios_pics/settings.png");
 const app_icon = require("../IOSDev/ios_pics/appicon.png");
+
+const infoArray = [
+	{
+		header: 'DingDing',
+		color: constants.CREME,
+		text: "An alarm to use while working out. Tells you when to keep moving and when to rest.",
+        align: 'left',
+		images: [
+			launchscreen, main_menu, dropdown_menu, current_session, settings, app_icon
+		]
+    }
+]
 
 export default class IOSDevPage extends Component {
     componentDidMount(){
@@ -27,8 +40,23 @@ export default class IOSDevPage extends Component {
             <Container>
                 <TopBar history={this.props.history}/>
                 <UpArrowBtn/>
-                <ProjHeader name="WorkItLoud App" text="An alarm to use while working out. Tells you when to keep moving and when to rest." />
-                <div style={{flex: 1}} data-aos="fade-up">
+                {/* <ProjHeader name="WorkItLoud App" text="An alarm to use while working out. Tells you when to keep moving and when to rest." /> */}
+
+                <InfoContainer order={2}>
+					{infoArray.map(info => {
+						console.log(info);
+						return (
+							<InfoArea
+								header={info.header}
+								color={info.color}
+								text={info.text}
+								align={info.align}
+								images={info.images}
+							/>
+						);
+					})}
+				</InfoContainer>
+                {/* <div style={{flex: 1}} data-aos="fade-up">
                     <Row>
                         <Column>
                             <SimpleCard image={launchscreen} name="launchscreen" />
@@ -51,7 +79,7 @@ export default class IOSDevPage extends Component {
                             <SimpleCard image={app_icon} name="app icon" />
                         </Column>
                     </Row>
-                </div>
+                </div> */}
             </Container>
         )
     }
@@ -82,4 +110,9 @@ const Container = styled("div") ({
     overflow: "scroll",
     backgroundColor: constants.DARK_GRAY,
     paddingBottom: "2%"
+})
+
+const InfoContainer = styled('div')({
+	order: 1,
+	flex: 1
 })
