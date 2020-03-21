@@ -1,19 +1,13 @@
-  
 {
-	"AWSEBDockerrunVersion": 2,
-	"containerDefinitions": [
-		{
-			"name": "nginx",
-			"image": "docker.io/jho44/site-prod3",
-			"essential": true,
-			"portMappings": [
-				{
-					"hostPort": 80,
-					"containerPort": 80
-				}
-			],
-            "memory": 128,
-            "links": ["node"]
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+        "Name": "jho44/site-prod3",
+        "Update": "true"
+    },
+    "Ports": [
+        {
+            "ContainerPort": "80"
         }
-	]
+    ],
+    "Logging": "/var/log/nginx"
 }
