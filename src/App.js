@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import { styled } from "@material-ui/styles"
 import HomePage from './Components/Home/HomePage';

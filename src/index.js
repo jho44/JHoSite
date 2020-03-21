@@ -1,3 +1,10 @@
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom"
+import Footer from "../src/Components/MultiplePages/Footer"
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -7,12 +14,7 @@ import PhotosPage from "../src/Components/Photos/PhotosPage"
 import IOSDevPage from "./Components/Code/IOSDev/IOSDevPage"
 import WebDevPage from "./Components/Code/WebDev/WebDevPage"
 import PythonDataPage from "./Components/Code/Python/PythonPage"
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from "react-router-dom"
-import Footer from "../src/Components/MultiplePages/Footer"
+import TestPage from "./Components/TestPage/TestPage"
 
 ReactDOM.render(
     <Router>
@@ -24,6 +26,7 @@ ReactDOM.render(
                 <Route exact path="/code/iosdev" component={IOSDevPage} />
                 <Route exact path="/code/webdev" component={WebDevPage} />
                 <Route exact path="/code/pythondata" component={PythonDataPage} />
+                <Route exact path="/test" component={TestPage} />
             </Switch>
             <Footer/>
         </div>

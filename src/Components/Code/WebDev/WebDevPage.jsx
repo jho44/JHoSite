@@ -2,8 +2,21 @@ import React, { Component } from "react"
 import TopBar from "../../MultiplePages/TopBar"
 import {styled} from "@material-ui/styles"
 import * as constants from "../../../constants"
-import ProjHeader from "../MultiplePages/ProjHeader"
 import UpArrowBtn from "../../MultiplePages/UpArrowBtn"
+import InfoArea from "../../MultiplePages/InfoArea"
+
+const app_icon = require("../IOSDev/ios_pics/appicon.png");
+
+const infoArray = [
+	{
+		header: 'designcreatesolar.com',
+		color: constants.LIGHT_PINK,
+		text: "I'm a Project Engineer of UCLA's SOLAR club -- helped build and maintain club's website",
+        align: 'left',
+		images: [app_icon
+		]
+    }
+]
 
 export default class IOSDevPage extends Component {
     render() {
@@ -11,8 +24,19 @@ export default class IOSDevPage extends Component {
             <Container>
                 <TopBar history={this.props.history}/>
                 <UpArrowBtn/>
-                <ProjHeader name="My site" text="This website is my baby. I'll be sure to get her through puberty on my next break."/>
-                <ProjHeader name="Design Create Solar Website" text="I'm a Project Engineer of the Design Create Solar club at UCLA and I'm one of the incubators for our baby club's infant website: designcreatesolar.com."/>
+                    <InfoContainer order={2}>
+                        {infoArray.map(info => {
+                            // console.log(info);
+                            return (
+                                <InfoArea
+                                    header={info.header}
+                                    color={info.color}
+                                    text={info.text}
+                                    align={info.align}
+                                />
+                            );
+                        })}
+                    </InfoContainer>
             </Container>
         )
     }
@@ -26,4 +50,9 @@ const Container = styled("div") ({
     overflow: "scroll",
     backgroundColor: constants.DARK_GRAY,
     paddingBottom: "2%"
+})
+
+const InfoContainer = styled('div')({
+	order: 1,
+	flex: 1
 })

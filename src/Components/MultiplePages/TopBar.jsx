@@ -108,6 +108,9 @@ export default function TopBar(props) {
                     <StyledButton onClick={() => props.history.push({ pathname: "/photos" })}>
                         Photos
                     </StyledButton>
+                    {/* <StyledButton onClick={() => props.history.push({ pathname: "/test" })}>
+                        Test
+                    </StyledButton> */}
                 </div>
             </ClickAwayListener>
         </div>
