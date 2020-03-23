@@ -17,7 +17,6 @@ export const CREME = "#ffe9d6";
 export const Desktop = (props) => <MediaQuery {...props} minDeviceWidth={1025} />;
 // export const Tablet = (props) => <MediaQuery {...props} minDeviceWidth={768} maxDeviceWidth={1224} />;
 export const MobilePortrait = (props) => <MediaQuery {...props} minDeviceWidth={360} maxDeviceWidth={414} minDeviceHeight={640} maxDeviceHeight={896} />;
-export const MobileLandscape = (props) => <MediaQuery {...props} minDeviceWidth={640} maxDeviceWidth={896} minDeviceHeight={360} maxDeviceHeight={414} />;
 export const Medium = (props) => <MediaQuery {...props} minDeviceWidth={641} maxDeviceWidth={1024} minDeviceHeight={415}/>;
 
 /* 

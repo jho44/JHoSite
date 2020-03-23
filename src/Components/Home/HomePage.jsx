@@ -9,9 +9,11 @@ import Tabletop from "tabletop"
 import FlipCard from "react-flipcard-2"
 import bruh from 'styled-components';
 import { MobilePortrait, MobileLandscape, Desktop, Medium } from '../../constants';
+import MediaQuery from "react-responsive"
 
 const images = [];
 var BioPic = null;
+
 export default class HomePage extends Component {
 
     constructor() {
@@ -80,54 +82,81 @@ export default class HomePage extends Component {
                 <meta name="viewport" content="width=device-width,initial-scale=1"/>
                 </head>
                 <TopBar history={this.props.history}/>
-                <Desktop>
-                    <UpArrowBtn/>
-                    <BetterHeader style={{height: "90vh"}}>
-                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
-                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}}>Off</HeaderText>
-                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}}>the</HeaderText>
-                        <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}}>Clock</HeaderText>
-                    </BetterHeader>
-                    <BetterAboutMe>
+                <MediaQuery query = "(orientation: portrait)">
+                    <Desktop>
+                        <UpArrowBtn/>
+                        <BetterHeader style={{height: "90vh"}}>
+                            <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}} >J. Ho</HeaderText>
+                            <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}} >Off</HeaderText>
+                            <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}} >the</HeaderText>
+                            <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}} >Clock</HeaderText>
+                        </BetterHeader>
+                        <BetterAboutMe>
+                            <FlipCard>
+                                <Front>
+                                    <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px", }} image={BioPic}/>
+                                    <TextFrontArea style={{flexGrow: 0.3}}>
+                                        <TextFront>Maximum</TextFront>
+                                        <TextFront>Effort</TextFront>
+                                        <TextFront>J. Ho</TextFront>
+                                    </TextFrontArea>
+                                </Front>
+                                <Back>
+                                    I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
+                                </Back>
+                            </FlipCard>
+                        </BetterAboutMe>
+                    </Desktop>
+                    
+                    <MobilePortrait>
+                        <BetterHeader style={{height: "95vh"}}>
+                            <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "3.5rem"}}>J. Ho</HeaderText>
+                            <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3rem"}}>Off</HeaderText>
+                            <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "1.5rem"}}>the</HeaderText>
+                            <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.1rem"}}>Clock</HeaderText>
+                        </BetterHeader>
+                        <BetterAboutMe>
+                            <FlipCard>
+                                <MobileFront>
+                                    <ImageThing style={{marginTop: "5%", marginBottom: "4%", width: "80%"}} image={BioPic}/>
+                                    <TextFrontArea>
+                                        <TextFront>Maximum</TextFront>
+                                        <TextFront>Effort</TextFront>
+                                        <TextFront>J. Ho</TextFront>
+                                    </TextFrontArea>
+                                </MobileFront>
+                                <Back>
+                                    I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
+                                </Back>
+                            </FlipCard>
+                        </BetterAboutMe>
+                    </MobilePortrait>
+                    
+                    <Medium>
+                        <BetterHeader style={{height: "90vh"}}>
+                            <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
+                            <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}}>Off</HeaderText>
+                            <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}}>the</HeaderText>
+                            <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}}>Clock</HeaderText>
+                        </BetterHeader>
+                        <BetterAboutMe style={{padding: "2rem 0"}}>
                         <FlipCard>
-                            <Front>
-                                <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px", }} image={BioPic}/>
-                                <TextFrontArea style={{flexGrow: 0.3}}>
-                                    <TextFront>Maximum</TextFront>
-                                    <TextFront>Effort</TextFront>
-                                    <TextFront>J. Ho</TextFront>
-                                </TextFrontArea>
-                            </Front>
-                            <Back>
-                                I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
-                            </Back>
-                        </FlipCard>
-                    </BetterAboutMe>
-                </Desktop>
-                <MobilePortrait>
-                    <BetterHeader style={{height: "95vh"}}>
-                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "3.5rem"}}>J. Ho</HeaderText>
-                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3rem"}}>Off</HeaderText>
-                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "1.5rem"}}>the</HeaderText>
-                        <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.1rem"}}>Clock</HeaderText>
-                    </BetterHeader>
-                    <BetterAboutMe>
-                        <FlipCard>
-                            <MobileFront>
-                                <ImageThing style={{marginTop: "5%", marginBottom: "4%", width: "80%"}} image={BioPic}/>
-                                <TextFrontArea>
-                                    <TextFront>Maximum</TextFront>
-                                    <TextFront>Effort</TextFront>
-                                    <TextFront>J. Ho</TextFront>
-                                </TextFrontArea>
-                            </MobileFront>
-                            <Back>
-                                I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
-                            </Back>
-                        </FlipCard>
-                    </BetterAboutMe>
-                </MobilePortrait>
-                <MobileLandscape>
+                                <Front>
+                                    <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px", backgroundPosition: "top center"}} image={BioPic}/>
+                                    <TextFrontArea style={{flexGrow: 0.4}}>
+                                        <TextFront>Maximum</TextFront>
+                                        <TextFront>Effort</TextFront>
+                                        <TextFront>J. Ho</TextFront>
+                                    </TextFrontArea>
+                                </Front>
+                                <Back>
+                                    I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
+                                </Back>
+                            </FlipCard>
+                        </BetterAboutMe>
+                    </Medium>
+                </MediaQuery>
+                <MediaQuery query = "(orientation: landscape)">
                     <BetterHeader style={{height: "90vh"}}>
                         <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "2.5rem", padding: "0.5rem"}}>J. Ho</HeaderText>
                         <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "2.5rem", padding: 0}}>Off</HeaderText>
@@ -149,30 +178,7 @@ export default class HomePage extends Component {
                             </Back>
                         </FlipCard>
                     </BetterAboutMe>
-                </MobileLandscape>
-                <Medium>
-                    <BetterHeader style={{height: "90vh"}}>
-                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
-                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}}>Off</HeaderText>
-                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}}>the</HeaderText>
-                        <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}}>Clock</HeaderText>
-                    </BetterHeader>
-                    <BetterAboutMe style={{padding: "2rem 0"}}>
-                    <FlipCard>
-                            <Front>
-                                <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px", backgroundPosition: "top center"}} image={BioPic}/>
-                                <TextFrontArea style={{flexGrow: 0.4}}>
-                                    <TextFront>Maximum</TextFront>
-                                    <TextFront>Effort</TextFront>
-                                    <TextFront>J. Ho</TextFront>
-                                </TextFrontArea>
-                            </Front>
-                            <Back>
-                                I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
-                            </Back>
-                        </FlipCard>
-                    </BetterAboutMe>
-                </Medium>
+                </MediaQuery>
             </Container>
 
         )
