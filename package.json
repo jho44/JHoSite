@@ -24,6 +24,7 @@
     "react-crossfade-image": "^1.2.0",
     "react-dom": "^16.9.0",
     "react-flipcard-2": "^0.3.2",
+    "react-responsive": "^8.0.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-scroll-up-button": "^1.6.4",
@@ -40,7 +41,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:prod": "docker build -t jho44/site-prod3 .",
-		"deploy:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh deploy"
+    "deploy:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh deploy"
   },
   "nodemonConfig": {
     "ignore": "./backend/data/*"

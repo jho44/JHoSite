@@ -8,6 +8,7 @@ import UpArrowBtn from "../MultiplePages/UpArrowBtn"
 import Tabletop from "tabletop"
 import FlipCard from "react-flipcard-2"
 import bruh from 'styled-components';
+import { MobilePortrait, MobileLandscape, Desktop, Medium } from '../../constants';
 
 const images = [];
 var BioPic = null;
@@ -60,7 +61,6 @@ export default class HomePage extends Component {
     getBioPic(data) {
         for (const index in data) {
             let alt = data[index] && data[index]["alt"]
-            console.log(alt)
             if (alt==="me")
             {
                 BioPic=data[index]["hyperlink"]
@@ -69,47 +69,112 @@ export default class HomePage extends Component {
         }
     }
 
-
     render() {
         const { data } = this.state
+        this.fillImageArr(data, images)
+        this.getBioPic(data)
         return (
             <Container>
                 <head>
-                    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat" />
-                    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+                <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat" />
+                <meta name="viewport" content="width=device-width,initial-scale=1"/>
                 </head>
                 <TopBar history={this.props.history}/>
-                {
-                    this.fillImageArr(data, images)
-                }
-                <UpArrowBtn/>
-                <BetterHeader>
-                    <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
-                    <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}}>Off</HeaderText>
-                    <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}}>the</HeaderText>
-                    <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}}>Clock</HeaderText>
-                </BetterHeader>
-                <BetterAboutMe>
-                    {
-                        this.getBioPic(data)
-                    }
-                    <FlipCard>
-                        <Front>
-                            <ImageThing data-aos="zoom-out" image={BioPic}/>
-                            <TextFrontArea>
-                                <TextFront>Maximum</TextFront>
-                                <TextFront>Effort</TextFront>
-                                <TextFront>J. Ho</TextFront>
-                            </TextFrontArea>
-                        </Front>
-                        <Back>
-                            <div>
+                <Desktop>
+                    <UpArrowBtn/>
+                    <BetterHeader style={{height: "90vh"}}>
+                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}}>Off</HeaderText>
+                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}}>the</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}}>Clock</HeaderText>
+                    </BetterHeader>
+                    <BetterAboutMe>
+                        <FlipCard>
+                            <Front>
+                                <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px", }} image={BioPic}/>
+                                <TextFrontArea style={{flexGrow: 0.3}}>
+                                    <TextFront>Maximum</TextFront>
+                                    <TextFront>Effort</TextFront>
+                                    <TextFront>J. Ho</TextFront>
+                                </TextFrontArea>
+                            </Front>
+                            <Back>
                                 I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
-                            </div>
-                        </Back>
-                    </FlipCard>
-                </BetterAboutMe>
+                            </Back>
+                        </FlipCard>
+                    </BetterAboutMe>
+                </Desktop>
+                <MobilePortrait>
+                    <BetterHeader style={{height: "95vh"}}>
+                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "3.5rem"}}>J. Ho</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3rem"}}>Off</HeaderText>
+                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "1.5rem"}}>the</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.1rem"}}>Clock</HeaderText>
+                    </BetterHeader>
+                    <BetterAboutMe>
+                        <FlipCard>
+                            <MobileFront>
+                                <ImageThing style={{marginTop: "5%", marginBottom: "4%", width: "80%"}} image={BioPic}/>
+                                <TextFrontArea>
+                                    <TextFront>Maximum</TextFront>
+                                    <TextFront>Effort</TextFront>
+                                    <TextFront>J. Ho</TextFront>
+                                </TextFrontArea>
+                            </MobileFront>
+                            <Back>
+                                I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
+                            </Back>
+                        </FlipCard>
+                    </BetterAboutMe>
+                </MobilePortrait>
+                <MobileLandscape>
+                    <BetterHeader style={{height: "90vh"}}>
+                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "2.5rem", padding: "0.5rem"}}>J. Ho</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "2.5rem", padding: 0}}>Off</HeaderText>
+                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "1rem", padding: "0.8rem", paddingBottom: 0}}>the</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="1000" data-aos-anchor-placement="bottom-bottom" style={{fontFamily: "Courier Prime", fontSize: "2.6rem", padding: "0.5rem"}}>Clock</HeaderText>
+                    </BetterHeader>
+                    <BetterAboutMe style={{padding: "2rem 0"}}>
+                    <FlipCard>
+                            <Front>
+                                <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px"}} image={BioPic}/>
+                                <TextFrontArea style={{flexGrow: 0.4}}>
+                                    <TextFront>Maximum</TextFront>
+                                    <TextFront>Effort</TextFront>
+                                    <TextFront>J. Ho</TextFront>
+                                </TextFrontArea>
+                            </Front>
+                            <Back>
+                                I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
+                            </Back>
+                        </FlipCard>
+                    </BetterAboutMe>
+                </MobileLandscape>
+                <Medium>
+                    <BetterHeader style={{height: "90vh"}}>
+                        <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="400" style={{fontFamily: "Dancing Script", fontSize: "3.5rem"}}>Off</HeaderText>
+                        <HeaderText data-aos="fade-right" daa-aos-delay="800" style={{fontFamily: "Abel", fontSize: "2rem"}}>the</HeaderText>
+                        <HeaderText data-aos="fade-right" data-aos-delay="1200" style={{fontFamily: "Courier Prime", fontSize: "3.6rem"}}>Clock</HeaderText>
+                    </BetterHeader>
+                    <BetterAboutMe style={{padding: "2rem 0"}}>
+                    <FlipCard>
+                            <Front>
+                                <ImageThing style={{height: "100%", borderRadius: "10px 0 0 10px", backgroundPosition: "top center"}} image={BioPic}/>
+                                <TextFrontArea style={{flexGrow: 0.4}}>
+                                    <TextFront>Maximum</TextFront>
+                                    <TextFront>Effort</TextFront>
+                                    <TextFront>J. Ho</TextFront>
+                                </TextFrontArea>
+                            </Front>
+                            <Back>
+                                I'm a UCLA CS Major. I got bored one day and decided to create this website to keep track of my progress on some projects and showcase my past works.
+                            </Back>
+                        </FlipCard>
+                    </BetterAboutMe>
+                </Medium>
             </Container>
+
         )
     }
 }
@@ -119,16 +184,27 @@ const Front = styled("div") ({
     display: "flex",
 })
 
+const MobileFront = styled("div") ({
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
+})
+
 const Back = styled("div") ({
     display: "flex",
     fontFamily: "Abel",
-    fontSize: "25px"
+    fontSize: "25px",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center"
 })
 
 const TextFront = styled("p") ({
     fontFamily: "Dancing Script",
-    fontSize: "2rem",
-    padding: "1rem 0",
+    fontSize: "1.8rem",
+    padding: "0.5rem 0",
     margin: 0
 })
 
@@ -138,17 +214,16 @@ const TextFrontArea = styled("div") ({
     justifyContent: "center",
     alignItems: "center",
     padding: 0,
-    paddingRight: "25px"
+    // flexGrow: 0.5,
+    // paddingRight: "25px"
 }) 
 
 const ImageThing = bruh.div`
     background-image: url(${props => props.image});
-    height: 100%;
-    background-size: contain; 
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: left center;
     flex-grow: 1;
-    border-radius: 10px 10px 0;
 `
 
 const HeaderText = styled("p") ({
@@ -170,7 +245,6 @@ const BetterHeader = styled("div") ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "95vh"
 })
 
 const Container = styled("div") ({
@@ -180,4 +254,3 @@ const Container = styled("div") ({
     height: "100%",
     overflow: "scroll",
 })
-
