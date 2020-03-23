@@ -14,10 +14,10 @@ export const LIGHT_PINK = "#ffd6e8";
 export const CREME = "#ffe9d6";
 
 /* enabling responsive stuff */
-export const Desktop = (props) => <MediaQuery {...props} minDeviceWidth={1025} />;
-// export const Tablet = (props) => <MediaQuery {...props} minDeviceWidth={768} maxDeviceWidth={1224} />;
-export const MobilePortrait = (props) => <MediaQuery {...props} minDeviceWidth={360} maxDeviceWidth={414} minDeviceHeight={640} maxDeviceHeight={896} />;
-export const Medium = (props) => <MediaQuery {...props} minDeviceWidth={641} maxDeviceWidth={1024} minDeviceHeight={415}/>;
+export const Desktop = (props) => <MediaQuery {...props} minWidth={1025} />;
+export const MobilePortrait = (props) => <MediaQuery {...props} minWidth={360} maxWidth={414} minHeight={640} maxHeight={896} />;
+export const Medium = (props) => <MediaQuery {...props} minWidth={641} maxWidth={1024} minHeight={415}/>;
+export const MobileLandscape = (props) => <MediaQuery {...props} minWidth={640} maxWidth={896} minHeight={360} maxHeight={414} />;
 
 /* 
     phones: lowest width 360
