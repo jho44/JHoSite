@@ -39,6 +39,7 @@ export default class HomePage extends Component {
             this.setState({
                 orientation: isPortrait() ? "portrait" : "landscape"
             })
+            console.log("sensed resize")
         });
 
     }
