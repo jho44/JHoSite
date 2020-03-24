@@ -13,7 +13,7 @@ import HomePage from "../src/Components/Home/HomePage"
 import PhotosPage from "../src/Components/Photos/PhotosPage"
 import IOSDevPage from "./Components/Code/IOSDev/IOSDevPage"
 import WebDevPage from "./Components/Code/WebDev/WebDevPage"
-import PythonDataPage from "./Components/Code/Python/PythonPage"
+import PythonPage from "./Components/Code/Python/PythonPage"
 import TestPage from "./Components/TestPage/TestPage"
 
 ReactDOM.render(
@@ -25,7 +25,7 @@ ReactDOM.render(
                 <Route exact path="/photos" component={PhotosPage} />
                 <Route exact path="/code/iosdev" component={IOSDevPage} />
                 <Route exact path="/code/webdev" component={WebDevPage} />
-                <Route exact path="/code/pythondata" component={PythonDataPage} />
+                <Route exact path="/code/pythondata" component={PythonPage} />
                 <Route exact path="/test" component={TestPage} />
             </Switch>
             <Footer/>

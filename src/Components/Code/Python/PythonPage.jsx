@@ -17,9 +17,7 @@ const infoArray = [
 		header: "Comparing Data Visualization Techniques from Python, Matlab, and Excel",
 		color: constants.CREME,
         text: "This project was done with the intent of diagnosing UCLA buildings that used significant quantities of electricity and training to handle data regarding club-made solar generator",
-        align: 'center',
-		images: [
-        ]
+        align: 'center'
     }
 ]
 
@@ -27,21 +25,18 @@ export default class PythonPage extends Component {
     render() {
         return (
             <Container>
-                <TopBar history={this.props.history}/>
-                <UpArrowBtn/>
+                <TopBar history = {this.props.history}/>
                 <InfoArea
-                    header="Comparing Data Visualization Techniques from Python, Matlab, and Excel"
+                    header="Comparing Data Visualization Techniques"
                     color={constants.CREME}
-                    text="This project was done with the intent of diagnosing UCLA buildings that used significant quantities of electricity and training to handle data regarding club-made solar generator"
-                    align='center'
+                    text="Amongst Python, Matlab, and Excel. Done with the intent of diagnosing UCLA buildings that used significant quantities of electricity and training to handle data regarding club-made solar generator"
+                    screensize="MobilePortrait"
                 />
                 <SimpleCard image={fourGraphs} name="Graphs for all 4 dining halls"/>
+                <SimpleCard image={oneBigGraph} name="Covel (Dining Hall) Electricity Usage"/>
+                <SimpleCard image={oneGraphCode} name="Code for Covel Graph"/>
+                <SimpleCard image={fourGraphsCode} name="Code for Grid Graphs"/>
 
-                {/* <div className="grid-container"> */}
-                 <SimpleCard image={oneBigGraph} name="Covel (Dining Hall) Electricity Usage"/>
-                 <SimpleCard image={oneGraphCode} name="Code for Covel Graph"/>
-                 <SimpleCard image={fourGraphsCode} name="Code for Grid Graphs"/>
-                 {/* </div> */}
             </Container>
         )
     }

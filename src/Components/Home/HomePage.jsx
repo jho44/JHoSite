@@ -12,7 +12,7 @@ import { MobilePortrait, MobileLandscape, Desktop, Medium } from '../../constant
 import MediaQuery from "react-responsive"
 
 const images = [];
-var BioPic = null;
+// var BioPic = null;
 const me = require("./me.jpg")
 
 export default class HomePage extends Component {
@@ -30,22 +30,14 @@ export default class HomePage extends Component {
             isFlipped: false,
             orientation: isPortrait() ? "portrait" : "landscape"
         }
-        // Dimensions.addEventListener("change", () => {
-        //     this.setState({
-        //         orientation: isPortrait() ? "portrait" : "landscape"
-        //     })
-        // })
+    
         window.addEventListener("resize", () => {
             this.setState({
                 orientation: isPortrait() ? "portrait" : "landscape"
             })
-            console.log("sensed resize")
         });
-
     }
 
-
-    
     componentDidMount(){
         AOS.init({
             duration : 1500
@@ -56,7 +48,6 @@ export default class HomePage extends Component {
             callback: googleData => {
                 this.setState({
                     data: googleData, 
-                    
                 })
             },
             simpleSheet: true
@@ -82,7 +73,6 @@ export default class HomePage extends Component {
         });
     }
 
-
     // getBioPic(data) {
     //     for (const index in data) {
     //         let alt = data[index] && data[index]["alt"]
@@ -101,9 +91,8 @@ export default class HomePage extends Component {
             return(
                 <Container>
                     <head>
-                    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat" />
-                    <meta name="viewport" content="width=width, initial-scale=1, minimum-scale=1" />
-
+                        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat" />
+                        <meta name="viewport" content="width=width, initial-scale=1, minimum-scale=1" />
                     </head>
                     <TopBar history={this.props.history}/>
                     
@@ -130,7 +119,7 @@ export default class HomePage extends Component {
                             </FlipCard>
                         </BetterAboutMe>
                     </MediaQuery>
-                    <MediaQuery query = "(min-width: 1025px)">
+                    <Desktop>
                         <UpArrowBtn/>
                         <BetterHeader style={{height: "90vh"}}>
                             <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}} >J. Ho</HeaderText>
@@ -153,8 +142,7 @@ export default class HomePage extends Component {
                                 </Back>
                             </FlipCard>
                         </BetterAboutMe>
-                    {/* </Desktop> */}
-                    </MediaQuery>
+                    </Desktop>
                     <Medium>
                         <BetterHeader style={{height: "90vh"}}>
                             <HeaderText data-aos="fade-right" style={{fontFamily: "Girassol", fontSize: "4rem"}}>J. Ho</HeaderText>
@@ -185,9 +173,8 @@ export default class HomePage extends Component {
             return (
                 <Container>
                     <head>
-                    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat" />
-                    <meta name="viewport" content="width=width, initial-scale=1, minimum-scale=1" />
-
+                        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat" />
+                        <meta name="viewport" content="width=width, initial-scale=1, minimum-scale=1" />
                     </head>
                     <TopBar history={this.props.history}/>
                     

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fade } from 'react-slideshow-image';
 import './SliderStyle.css';
+import styled from "styled-components"
 
 const fadeProperties = {
 	duration: 3000,
@@ -10,9 +11,9 @@ const fadeProperties = {
 };
 
 const Slideshow = props => {
-	console.log(props);
+	console.log(props.screensize)
 	return (
-		<div className='slide-container'>
+		<Container screensize={props.screensize}>
 			<Fade {...fadeProperties}>
 				{props.images.map(image => (
 					<div
@@ -36,8 +37,15 @@ const Slideshow = props => {
 					</div>
 				))}
 			</Fade>
-		</div>
+		</Container>
 	);
 };
+
+const Container = styled.div`
+	width: ${props => props.screensize === "MobilePortrait" ? "80%" : "50%"};
+	padding: 5% 0;
+	align-items: center;
+	margin: 0;
+`
 
 export default Slideshow;

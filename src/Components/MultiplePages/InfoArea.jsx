@@ -7,131 +7,48 @@ import Slideshow from './Slideshow';
 // import { Desktop } from '../constants';
 // import SlideshowMobile from './ProgramsPage/SlideShowMobile';
 
-var color;
 const InfoArea = props => {
-	if (props.color === constants.CREME)
+	console.log(props.color)
+	if (props.color === constants.LIGHT_PINK && props.screensize === "MobilePortrait")
 		return (
-			<div>
-				{/* <Desktop> */}
-					<ContainerDark
-						flexDirection={
-							props.align === 'left' ? 'row' : 'row-reverse'
-						}
-						backgroundColor='red'
-					>
-						<TextArea>
-							<h4 className='info-header'>{props.header}</h4>
-							<ActualText>{props.text}</ActualText>
-						</TextArea>
-						{props.images && <Slideshow images={props.images} />}
-					</ContainerDark>
-				{/* </Desktop> */}
-				{/* <Default>
-					<ContainerDark flexDirection='column' backgroundColor='red'>
-						<TextAreaMobile>
-							<h4 className='info-header mobile-header'>
-								{props.header}
-							</h4>
-							<ActualText
-								style={{
-									padding: '0 0 0 0',
-									margin: '0 0 0 0'
-								}}
-							>
-								{props.text}
-							</ActualText>
-						</TextAreaMobile>
-						{props.images && (
-							<SlideshowMobile images={props.images} />
-						)}
-					</ContainerDark>
-				</Default>
-				<Mobile>
-					<ContainerDark flexDirection='column' backgroundColor='red'>
-						<TextAreaMobile>
-							<h4 className='info-header mobile-header'>
-								{props.header}
-							</h4>
-							<ActualText
-								style={{
-									padding: '0 0 0 0',
-									margin: '0 0 0 0'
-								}}
-							>
-								{props.text}
-							</ActualText>
-						</TextAreaMobile>
-						{props.images && (
-							<SlideshowMobile images={props.images} />
-						)}
-					</ContainerDark>
-				</Mobile> */}
-			</div>
+			<ContainerDark flexDirection="column">
+				<TextAreaMobile>
+					<h4 className='info-header'>{props.header}</h4>
+					<ActualText>{props.text}</ActualText>
+				</TextAreaMobile>
+
+				{props.images && <Slideshow images={props.images} screensize={props.screensize}/>}
+			</ContainerDark>
 		);
-	if (props.color === constants.LIGHT_PINK)
+	if (props.color === constants.LIGHT_PINK && props.screensize === "Else")
 		return (
-			<div>
-				{/* <Desktop> */}
-					<ContainerLight
-						flexDirection={
-							props.align === 'left' ? 'row' : 'row-reverse'
-						}
-						backgroundColor='red'
-					>
-						<TextArea>
-							<h4 className='info-header'>{props.header}</h4>
-							<ActualText>{props.text}</ActualText>
-						</TextArea>
-						{props.images && <Slideshow images={props.images} />}
-					</ContainerLight>
-				{/* </Desktop> */}
-				{/* <Default>
-					<ContainerLight
-						flexDirection='column'
-						backgroundColor='red'
-					>
-						<TextAreaMobile>
-							<h4 className='info-header mobile-header'>
-								{props.header}
-							</h4>
-							<ActualText
-								style={{
-									padding: '0 0 0 0',
-									margin: '0 0 0 0'
-								}}
-							>
-								{props.text}
-							</ActualText>
-						</TextAreaMobile>
-						{props.images && (
-							<SlideshowMobile images={props.images} />
-						)}
-					</ContainerLight>
-				</Default>
-				<Mobile>
-					<ContainerLight
-						flexDirection='column'
-						backgroundColor='red'
-					>
-						<TextAreaMobile>
-							<h4 className='info-header mobile-header'>
-								{props.header}
-							</h4>
-							<ActualText
-								style={{
-									padding: '0 0 0 0',
-									margin: '0 0 0 0'
-								}}
-							>
-								{props.text}
-							</ActualText>
-						</TextAreaMobile>
-						{props.images && (
-							<SlideshowMobile images={props.images} />
-						)}
-					</ContainerLight>
-				</Mobile> */}
-			</div>
+			<ContainerDark flexDirection="row">
+				<TextArea>
+					<h4 className='info-header'>{props.header}</h4>
+					<ActualText>{props.text}</ActualText>
+				</TextArea>
+				{props.images && <Slideshow images={props.images} screensize={props.screensize}/>}
+			</ContainerDark>
+		);
+	if (props.color === constants.CREME && props.screensize === "MobilePortrait")
+		return (
+			<ContainerLight flexDirection="column">
+				<TextAreaMobile>
+					<h4 className='info-header'>{props.header}</h4>
+					<ActualText>{props.text}</ActualText>
+				</TextAreaMobile>
+				{props.images && <Slideshow images={props.images} screensize={props.screensize}/>}
+			</ContainerLight>
+		);
+	if (props.color === constants.CREME && props.screensize === "Else")
+		return (
+			<ContainerLight flexDirection="row">
+				<TextArea>
+					<h4 className='info-header'>{props.header}</h4>
+					<ActualText>{props.text}</ActualText>
+				</TextArea>
+				{props.images && <Slideshow images={props.images} screensize={props.screensize}/>}
+			</ContainerLight>
 		);
 };
 
