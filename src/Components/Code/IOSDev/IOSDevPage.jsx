@@ -5,7 +5,6 @@ import * as constants from "../../../constants"
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import UpArrowBtn from "../../MultiplePages/UpArrowBtn"
 import InfoArea from "../../MultiplePages/InfoArea"
 
 const launchscreen = require("../IOSDev/ios_pics/launchscreen.png");
@@ -61,6 +60,14 @@ export default class IOSDevPage extends Component {
             duration : 1500
         })
     }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", () => {
+            this.setState({
+                screensize: this.isMobilePortrait() ? "MobilePortrait" : "Else"
+            })
+        })
+    }
     render() {
         return (
             <Container>
@@ -68,7 +75,6 @@ export default class IOSDevPage extends Component {
 ]
                 <InfoContainer order={2}>
                     {infoArray.map(info => {
-                        console.log(this.state.screensize);
                         return (
                             <InfoArea
                                 header={info.header}

@@ -8,7 +8,7 @@ import UpArrowBtn from "../MultiplePages/UpArrowBtn"
 import Tabletop from "tabletop"
 import FlipCard from "react-flipcard-2"
 import bruh from 'styled-components';
-import { MobilePortrait, MobileLandscape, Desktop, Medium } from '../../constants';
+import { MobilePortrait, Desktop, Medium } from '../../constants';
 import MediaQuery from "react-responsive"
 
 const images = [];
@@ -51,6 +51,14 @@ export default class HomePage extends Component {
                 })
             },
             simpleSheet: true
+        })
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", () => {
+            this.setState({
+                screensize: this.isPortrait() ? "portrait" : "landscape"
+            })
         })
     }
 

@@ -8,7 +8,6 @@ import Slideshow from './Slideshow';
 // import SlideshowMobile from './ProgramsPage/SlideShowMobile';
 
 const InfoArea = props => {
-	console.log(props.color)
 	if (props.color === constants.LIGHT_PINK && props.screensize === "MobilePortrait")
 		return (
 			<ContainerDark flexDirection="column">

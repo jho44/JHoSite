@@ -11,7 +11,6 @@ const fadeProperties = {
 };
 
 const Slideshow = props => {
-	console.log(props.screensize)
 	return (
 		<Container screensize={props.screensize}>
 			<Fade {...fadeProperties}>
