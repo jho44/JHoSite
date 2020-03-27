@@ -2,11 +2,10 @@
 
 import React from "react";
 import {styled} from "@material-ui/styles"
-import * as constants from "../../constants"
 import { useAuth0 } from "../../react-auth0-spa";
 import "./NavBar.css"
 
-const NavBar = () => {
+const NavBar = (props) => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
@@ -25,6 +24,7 @@ const NavBar = () => {
           <div style= {{padding: "2rem"}}>
             <button 
               class="second-sweep-to-right"
+              onClick={() => props.history.push({ pathname: "/fun/WHOO"})}
             >
               CLICK ME
             </button>
@@ -43,6 +43,7 @@ const NavBar = () => {
   );
 };
 
+
 const Container = styled("div") ({
   display: "flex",
   flexDirection: "column",
@@ -59,7 +60,5 @@ const FunContainer = styled("div") ({
   display: "flex",
   flexDirection: "column",
 })
-
-
 
 export default NavBar;

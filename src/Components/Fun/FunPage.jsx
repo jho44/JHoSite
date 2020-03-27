@@ -1,37 +1,23 @@
-import React from "react"
+import React, { Fragment } from "react";
+import { useAuth0 } from "../../react-auth0-spa";
 import TopBar from "../MultiplePages/TopBar"
-import {styled} from "@material-ui/styles"
+import Loading from "./Loading"
 
-import NavBar from "./NavBar"
-import { useAuth0 } from "../../react-auth0-spa"
+import BookShelf from "./BookShelf"
 
 const FunPage = (props) => {
-    const {loading} = useAuth0()
+  const { loading, user } = useAuth0();
 
-    if (loading) {
-        return <Container>Loading...</Container>
-    }
+  if (loading || !user) {
+    return <Loading/>
+  }
 
-    return (
-        <div>
-            <TopBar history={props.history}/>
-            <NavBar/>
-        </div>
-    )
+  return (
+    <Fragment>
+        <TopBar history={props.history}/>
+        <BookShelf/>
+    </Fragment>
+  );
+};
 
-}
-
-const Container = styled("div") ({
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    height: "100vh",
-    overflow: "scroll",
-    backgroundImage: "linear-gradient(to right, #ffd6e8, #ffe9d6)",
-    fontFamily: "Abel",
-    fontSize: "2rem"
-  })
-
-export default FunPage
+export default FunPage;

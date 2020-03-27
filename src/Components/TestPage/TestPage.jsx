@@ -1,8 +1,10 @@
 import React, {Component} from "react"
 import TopBar from "../MultiplePages/TopBar"
 import axios from "axios"
+import URL from "../../../public/url"
 
 export default class TestPage extends Component {
+    
     constructor() {
         super()
 
@@ -14,7 +16,7 @@ export default class TestPage extends Component {
     }
 
     componentWillMount() {
-        axios.get("http://localhost:4000/items")
+        axios.get(URL + ":4000/items")
         .then((reply) => {
             console.log(reply)
             this.setState({ response: reply})

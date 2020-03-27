@@ -49,13 +49,9 @@ const StyledButton = withStyles({
 const SmallerStyledButton = withStyles({
     root: {
         borderRadius: 3,
-        //border: 10,
         background: "rgba(255,255,255, 0.8)",
         color: "black",
         height: 40,
-        // borderColor: "black",
-        // borderWidth: "1px",
-        // borderStyle: "solid",
         position: "relative",
         fontSize: "15px", 
         fontFamily: "Avenir Next",
