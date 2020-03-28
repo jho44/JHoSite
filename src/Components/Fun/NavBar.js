@@ -11,12 +11,12 @@ const NavBar = (props) => {
   return (
     <Container>
       {!isAuthenticated && (
-        <button
-          onClick={() => loginWithRedirect({})}
-          class="hvr-sweep-to-right"
-        >
-          Admin Login
-        </button>
+          <button
+            onClick={() => loginWithRedirect({})}
+            class="hvr-sweep-to-right"
+          >
+            Login
+          </button>
       )}
 
       {isAuthenticated && 

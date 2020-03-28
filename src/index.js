@@ -17,13 +17,13 @@ import PythonPage from "./Components/Code/Python/PythonPage"
 import TestPage from "./Components/TestPage/TestPage"
 import FunLoginPage from "./Components/Fun/FunLoginPage"
 import FunPage from "./Components/Fun/FunPage"
+import UnderDevelopmentPage from "./Components/UnderDevelopmentPage"
 
 import PrivateRoute from "./Components/Fun/PrivateRoute"
 
 import { Auth0Provider } from "./react-auth0-spa";
 import config from "./auth_config.json";
 import history from "./utils/history";
-import URL from "../public/url"
 
 // A function that routes the user to the right place
 // after login
@@ -52,13 +52,14 @@ ReactDOM.render(
                     <Auth0Provider
                         domain={config.domain}
                         client_id={config.clientId}
-                        // redirect_uri="https://offtheclockjho.com/fun"
-                        redirect_uri= "http://offtheclockjho.com/fun"
+                        redirect_uri="https://offtheclockjho.com/fun"
+                        // redirect_uri= "http://localhost:3000/fun"
                         onRedirectCallback={onRedirectCallback}
                     >
                         <Switch>
                             <Route exact path="/fun" component={FunLoginPage}/>
-                            <PrivateRoute exact path="/fun/WHOO" component={FunPage}/>
+                            {/* <PrivateRoute exact path="/fun/WHOO" component={FunPage}/> */}
+                            <PrivateRoute exact path="/fun/WHOO" component={UnderDevelopmentPage}/>
                         </Switch>
                     </Auth0Provider>
                 </Switch>

@@ -2,7 +2,6 @@ import React from "react"
 import axios from "axios";
 import classNames from "classnames"
 import jQuery from "jquery"
-import URL from "../../../public/url"
 
 var createReactClass = require("create-react-class")
 
@@ -12,7 +11,7 @@ var BookShelf = createReactClass({
       return {data: []};
     },
     loadBooksFromServer: function() {
-      axios.get(URL + ":4000/books")
+      axios.get("http://localhost:4000/books")
       .then((response) => {
         this.setState({data: response.data});
         console.log(response.data)
@@ -28,7 +27,7 @@ var BookShelf = createReactClass({
     handleBookSubmit: function(book) {
       //this is just an example of how you would submit a form
       //you would have to implement something separately on the server
-      axios.post(URL + ":4000/book", {
+      axios.post("http://localhost:4000/book", {
         title: book.title,
         author: book.author,
         release_date: book.release_date,
