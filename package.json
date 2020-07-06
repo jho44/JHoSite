@@ -26,7 +26,9 @@
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.6",
     "nodemon": "^2.0.2",
+    "path": "^0.12.7",
     "react": "^16.9.0",
+    "react-burger-menu": "^2.7.0",
     "react-crossfade-image": "^1.2.0",
     "react-dom": "^16.9.0",
     "react-flipcard-2": "^0.3.2",
@@ -46,7 +48,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:prod": "docker build -t jho44/site-prod3 .",
+    "build:prod": "docker build -t jho44/personal-front .",
     "deploy:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh deploy"
   },
   "nodemonConfig": {

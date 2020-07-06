@@ -1,35 +1,35 @@
 .card-name {
-    padding-left: 5%;
-    font-size: 20px;
-    font-family: "Abel";
-    margin: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-     /* white-space: nowrap;  */
-    /* border-style: solid; */
+  padding-left: 5%;
+  font-size: 20px;
+  font-family: "Abel";
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* white-space: nowrap;  */
+  /* border-style: solid; */
 }
 
 .card-name-box {
-    padding: 0;
-    display: flex;
-    height: fit-content;
+  padding: 0;
+  display: flex;
+  height: fit-content;
 }
 
 .card-button {
-    padding: 0; 
-    margin-left: auto;
-    /* border-style: solid; */
+  padding: 0;
+  margin-left: auto;
+  /* border-style: solid; */
 }
 
 .card-boi {
-    /* box-shadow: 3px 3px 5px black; */
-    padding: 0.5rem
+  /* box-shadow: 3px 3px 5px black; */
+  padding: 0.5rem;
 }
 
 .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
