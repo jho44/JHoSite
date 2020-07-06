@@ -1,13 +1,13 @@
 {
-    "AWSEBDockerrunVersion": "1",
-    "Image": {
-        "Name": "jho44/site-prod3",
-        "Update": "true"
-    },
-    "Ports": [
-        {
-            "ContainerPort": "80"
-        }
-    ],
-    "Logging": "/var/log/nginx"
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "jho44/personal-front",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "80"
+    }
+  ],
+  "Logging": "/var/log/nginx"
 }
