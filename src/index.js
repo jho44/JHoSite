@@ -7,12 +7,12 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import HomePage from "../src/Components/Home/HomePage";
 import PhotosPage from "../src/Components/Photos/PhotosPage";
-import IOSDevPage from "./Components/Code/IOSDev/IOSDevPage";
+import MobileDevPage from "./Components/Code/MobileDev/MobileDevPage";
 import WebDevPage from "./Components/Code/WebDev/WebDevPage";
 import PythonPage from "./Components/Code/Python/PythonPage";
 import TestPage from "./Components/TestPage/TestPage";
 import FunLoginPage from "./Components/Fun/FunLoginPage";
-import FunPage from "./Components/Fun/FunPage";
+// import FunPage from "./Components/Fun/FunPage";
 import UnderDevelopmentPage from "./Components/UnderDevelopmentPage";
 
 import PrivateRoute from "./Components/Fun/PrivateRoute";
@@ -38,7 +38,7 @@ ReactDOM.render(
         <Route exact path="/" component={HomePage} />
         <Route exact path="/home" component={HomePage} />
         <Route exact path="/photos" component={PhotosPage} />
-        <Route exact path="/code/iosdev" component={IOSDevPage} />
+        <Route exact path="/code/mobiledev" component={MobileDevPage} />
         <Route exact path="/code/webdev" component={WebDevPage} />
         <Route exact path="/code/pythondata" component={PythonPage} />
         <Route exact path="/test" component={TestPage} />

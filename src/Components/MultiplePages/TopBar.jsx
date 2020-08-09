@@ -6,7 +6,6 @@ import Drawer from "@material-ui/core/Drawer";
 import { BrowserRouter as Router } from "react-router-dom";
 import { withStyles, fade } from "@material-ui/core/styles";
 import * as constants from "../../constants";
-import { slide as Menu } from "react-burger-menu";
 
 import clsx from "clsx";
 import List from "@material-ui/core/List";
@@ -159,7 +158,7 @@ export default function TopBar(props) {
       <List>
         {["iOS", "WebDev", "Python"].map(function (text, index) {
           let nextPage;
-          if (text === "iOS") nextPage = "/code/iosdev";
+          if (text === "iOS") nextPage = "/code/mobiledev";
           else if (text === "WebDev") nextPage = "/code/webdev";
           else nextPage = "/code/pythondata";
           return (
@@ -227,10 +226,10 @@ export default function TopBar(props) {
                 >
                   <SmallerStyledButton
                     onClick={() =>
-                      props.history.push({ pathname: "/code/iosdev" })
+                      props.history.push({ pathname: "/code/mobiledev" })
                     }
                   >
-                    iOS Dev
+                    Mobile Dev
                   </SmallerStyledButton>
                   <SmallerStyledButton
                     onClick={() =>

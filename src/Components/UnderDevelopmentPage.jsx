@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TopBar from "./MultiplePages/TopBar";
 import { styled } from "@material-ui/styles";
-import * as constants from "../constants";
+// import * as constants from "../constants";
 const screen = require("./MultiplePages/screensize");
 
 export default class UnderDevelopmentPage extends Component {

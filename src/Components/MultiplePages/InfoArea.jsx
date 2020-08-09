@@ -82,6 +82,7 @@ const ContainerDark = styled(Box)({
 
 const ContainerLight = styled(Box)({
   display: "flex",
+  flexDirection: "row-reverse",
   alignItems: "center",
   backgroundColor: constants.PINK_GRAY,
   color: "black",

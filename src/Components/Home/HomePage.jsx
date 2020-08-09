@@ -57,7 +57,7 @@ export default class HomePage extends Component {
   }
 
   fillImageArr(data, images) {
-    for (const index in data) {
+    for (var index in data) {
       let link = data[index] && data[index]["hyperlink"];
       images.push(link);
     }

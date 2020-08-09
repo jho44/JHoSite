@@ -4,24 +4,23 @@ import { styled } from "@material-ui/styles";
 import * as constants from "../../../constants";
 
 import AOS from "aos";
-import "aos/dist/aos.css";
+import "../../../../node_modules/aos/dist/aos.css";
 import InfoArea from "../../MultiplePages/InfoArea";
 const screen = require("../../MultiplePages/screensize");
 
-const launchscreen = require("../IOSDev/ios_pics/launchscreen.png");
-const main_menu = require("../IOSDev/ios_pics/main_menu.png");
-const dropdown_menu = require("../IOSDev/ios_pics/dropdown_menu.png");
-const current_session = require("../IOSDev/ios_pics/current_session.png");
-const settings = require("../IOSDev/ios_pics/settings.png");
-const app_icon = require("../IOSDev/ios_pics/appicon.png");
-
+const launchscreen = require("../MobileDev/ios_pics/launchscreen.png");
+const main_menu = require("../MobileDev/ios_pics/main_menu.png");
+const dropdown_menu = require("../MobileDev/ios_pics/dropdown_menu.png");
+const current_session = require("../MobileDev/ios_pics/current_session.png");
+const settings = require("../MobileDev/ios_pics/settings.png");
+const app_icon = require("../MobileDev/ios_pics/appicon.png");
+const LocationsApp = require("../MobileDev/ios_pics/LocationsApp.png");
 const infoArray = [
   {
     header: "DingDing",
     color: constants.PINK_GRAY,
     text:
-      "An alarm to use while working out. Tells you when to keep moving and when to rest.",
-    align: "left",
+      "Personal iOS alarm for working out. Tells you when to keep moving and when to rest.",
     images: [
       launchscreen,
       main_menu,
@@ -31,9 +30,16 @@ const infoArray = [
       app_icon,
     ],
   },
+  {
+    header: "LocationsApp",
+    color: constants.LIGHT_PINK,
+    text:
+      "Club React Native Project for helping UCLA student body determine quiet studying/dining areas around campus. Mostly in charge of debugging.",
+    images: [LocationsApp],
+  },
 ];
 
-export default class IOSDevPage extends Component {
+export default class MobileDevPage extends Component {
   constructor() {
     super();
     /* 
@@ -84,7 +90,6 @@ export default class IOSDevPage extends Component {
                 header={info.header}
                 color={info.color}
                 text={info.text}
-                align={info.align}
                 images={info.images}
                 screensize={this.state.screensize}
               />

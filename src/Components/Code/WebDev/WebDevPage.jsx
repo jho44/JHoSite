@@ -11,8 +11,24 @@ const infoArray = [
     header: "designcreatesolar.com",
     color: constants.LIGHT_PINK,
     text:
-      "I'm a Project Engineer of UCLA's SOLAR club -- helped build and maintain club's website",
-    align: "left",
+      "As the co-lead of UCLA's SOLAR club's Software Subsystem, I maintain the club's website. Built with the Software team in React.",
+  },
+  {
+    header: "offtheclockjho.com",
+    color: constants.PINK_GRAY,
+    text: "Built myself using React, AWS, Docker (soon to include MongoDB)",
+  },
+  {
+    header: "Wordpress Consultation",
+    color: constants.LIGHT_PINK,
+    text:
+      "Commissioned to teach client about WP functionality; learned how to make WP Themes with React along the way",
+  },
+  {
+    header: "ClassHelper Chrome Extension",
+    color: constants.PINK_GRAY,
+    text:
+      "Club React project to help UCLA students find classes that fit their schedule during enrollment",
   },
 ];
 
@@ -44,7 +60,6 @@ export default class WebDevPage extends Component {
                 header={info.header}
                 color={info.color}
                 text={info.text}
-                align={info.align}
                 screensize={this.state.screensize}
               />
             );
