@@ -1,0 +1,15 @@
+h4.info-header {
+  font-weight: 500;
+  font-size: 3rem;
+  text-transform: uppercase;
+  /*padding: 20px;*/
+  font-family: "Abel";
+  text-shadow: 2px 3px 2px gray;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+h4.info-header.mobile-header {
+  margin: 0 0 0 0;
+}

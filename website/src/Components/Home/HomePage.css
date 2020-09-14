@@ -1,0 +1,58 @@
+.ReactFlipCard {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 897px) {
+  .ReactFlipCard,
+  .ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    box-sizing: border-box;
+    width: 500px;
+    height: 400px;
+  }
+  .ReactFlipCard__Back {
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+  }
+}
+
+/* mobile landscape */
+@media only screen and (max-width: 896px) and (min-width: 667px){
+  .ReactFlipCard,
+  .ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    box-sizing: border-box;
+    min-width: 600px;
+    height: 350px;
+  }
+  .ReactFlipCard__Back {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+  }
+}
+
+/* mobile portrait */
+@media only screen and (max-width: 414px) {
+  .ReactFlipCard,
+  .ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    box-sizing: border-box;
+    min-width: 350px;
+    height: 500px;
+  }
+  .ReactFlipCard__Back {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+  }
+}
+
+.ReactFlipCard__Front,
+.ReactFlipCard__Back {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.ReactFlipCard__Front {
+  background-color: rgba(255, 255, 255);
+}
